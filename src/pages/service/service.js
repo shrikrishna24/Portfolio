@@ -13,28 +13,41 @@ export default function Service() {
         return () => clearTimeout(timeOut);
     }, [autoplay, current]);
 
+    const getCardsPerPage = () => {
+        if (window.innerWidth <= 800) {
+            return 1; // 1 card per row for mobile
+        } else if (window.innerWidth <= 1624) {
+            return 3; // 3 cards per row for screens less than 1624px wide
+        } else {
+            return 4; // 4 cards per row for larger screens
+        }
+    };
+
     const slideRight = () => {
-        setCurrent((current + 4) % typeOfServices.length);
+        const cardsPerPage = getCardsPerPage();
+        setCurrent((current + cardsPerPage) % typeOfServices.length);
     };
 
     const slideLeft = () => {
-        setCurrent((current - 4 + typeOfServices.length) % typeOfServices.length);
+        const cardsPerPage = getCardsPerPage();
+        setCurrent((current - cardsPerPage + typeOfServices.length) % typeOfServices.length);
     };
 
     return (
         <Element name="services" className="service-container">
             <div className="service-bg"></div>
             <section className="service-content">
-                <header className='about-header'>
+                <div className='about-header'>
                     <h1>Services</h1>
-                </header>
+                </div>
                 <div
+                    className='service-card-container'
                     onMouseEnter={() => setAutoplay(false)}
                     onMouseLeave={() => setAutoplay(true)}
                 >
-                    {typeOfServices.slice(current, current + 4).map((item, index) => {
+                    {typeOfServices.slice(current, current + getCardsPerPage()).map((item, index) => {
                         return (
-                            <div key={index} className={`service-cards`} >
+                            <div key={index} className="service-cards" >
                                 <div>
                                     <p className="service-title">{item.serviceType}</p>
                                 </div>
@@ -50,13 +63,13 @@ export default function Service() {
                 {/* ARROW */}
                 <div>
                     <div className="carousel_arrow_left" onClick={slideLeft}>
-                        <p >
+                        <p className='arrow-text'>
                             &lsaquo;
                         </p>
                     </div>
 
                     <div className="carousel_arrow_right" onClick={slideRight}>
-                        <p>
+                        <p className='arrow-text'>
                             &rsaquo;
                         </p>
                     </div>

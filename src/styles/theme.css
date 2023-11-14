@@ -7,7 +7,7 @@
   --white: #FAFAFA;
   --dark-primary: #1b365d;
   --highlight: #EBF3FE;
-  --shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+  --shadow:-3px 10px 22px -10px rgba(0,0,0,0.74);
   --radius :5px
 }
   

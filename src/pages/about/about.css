@@ -56,8 +56,8 @@
     color: var(--white);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 45%;
+    gap: 40px;
+    padding-bottom: 20px;
 }
 
 .about-decrp{
@@ -81,7 +81,8 @@
     justify-content: flex-start;
 }
 
-@media only screen and (min-width: 1200px) {
+
+@media only screen and (min-width: 1200px) and (max-width:2440) {
 
     .about-content{
         gap: 80px;
