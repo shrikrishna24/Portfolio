@@ -1,0 +1,11 @@
+.contact-container{
+    background-color: var(--primary);
+    align-items: center;
+    padding: 60px 0;
+}
+
+.contact-content{
+    height: 100%;
+    background-color: var(--white);
+    border-radius: 8px;
+}

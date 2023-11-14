@@ -1,0 +1,9 @@
+.container > div {
+    height: calc(100vh - 71px);
+    display: flex;
+    justify-content: center;
+  }
+
+.container > div > section{
+    width: 69rem;
+}

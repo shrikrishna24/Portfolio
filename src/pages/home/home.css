@@ -1,0 +1,56 @@
+
+.home-content{
+    display: flex;  
+    align-items: center;
+}
+
+/* HOME LEFT HAND SIDE  */
+.home-tagline{
+    width: 60%;
+    color:var(--textcolor);
+}
+
+.home-img{
+    width: 40%;
+}
+
+.home-img img{
+    height: 100%;
+    width: 100%;
+}
+
+.home-tagline h1{
+    margin: 28px 0;
+    font-size: 2.5rem;
+    text-align: left;
+}
+.tagline-heading{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tagline-descrp{
+    font-size: 18px ;
+    font-weight: 400 ;
+}
+
+/* HOME BUTTON  */
+.home-btn{
+    display: flex;
+    gap: 20px;
+}
+.home-btn button{
+    margin-top: 40px;
+    width: 160px !important;
+}
+
+.home-btn .btn-primary button:nth-child(1){
+    background-color: #efefee;
+}
+
+.home-btn .btn-primary  button:nth-child(1):hover{
+    color: var(--primary);
+    background-color: #efefee
+}
+
+

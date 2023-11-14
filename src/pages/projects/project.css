@@ -1,0 +1,48 @@
+.project-container{
+    position: relative;
+}
+
+.project-content{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;   
+    text-align: justify;
+}
+
+ .project-carousel{
+    z-index: 8;
+    width: 400px;
+    height: 70%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius);
+} 
+
+.carousel-title{
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-title:hover{
+    background-color: #ffc801aa;    
+    color: var(--dark-primary);    
+    cursor: pointer;
+}
+
+.carousel-title,.carousel-descrp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-descrp{
+    background-color: var(--primary);
+    padding: 0 30px;
+    height: 100%;
+    box-shadow: var(--shadow);
+}
+

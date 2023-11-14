@@ -1,0 +1,34 @@
+.skill-icon{
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 30px;
+}
+
+.skill-icon li{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: 110px;
+}
+
+.skill-icon li:hover{
+    cursor:default;
+    color: var(--primary);
+}
+
+.skill-icon li>span{
+    margin-top: 7px;
+}
+
+.readmore-skill{
+    color: var(--white);    
+
+    background-color: var(--dark-primary);
+    padding: 0 3px;
+}
+
+.readmore-skill:hover{
+    color: var(--primary);
+}

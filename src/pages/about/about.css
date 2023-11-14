@@ -1,0 +1,79 @@
+.about-conatainer{
+    background-color: var(--dark-primary);
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-img {
+    width: 40%;
+    position: relative;
+}
+
+.about-img-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 0%; /* Initial border-radius value */
+    box-sizing: border-box;
+    box-shadow: var(--shadow);
+    animation: borderAnimation 2.5s ease-in-out infinite alternate; 
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-radius: 60% 45%; /* Initial border-radius value */
+    }
+    100% {
+        border-radius: 45% 60%; /* Final border-radius value */
+    }
+}
+
+
+.mine-img{
+    position: relative;
+    width: 84%;
+    height: 350px;
+    background-image: url('../../assests/about/about-photo.jpg');
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 5%;
+}
+
+/* ABOUT RIGHT SIDE  */
+
+.about-spans{
+    color: var(--primary);
+}
+.about-text{
+    width: 55%;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+}
+
+.about-decrp{
+    margin-bottom: 28px 0;
+    text-align: justify;
+}
+
+.about-heading{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+

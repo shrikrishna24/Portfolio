@@ -1,0 +1,32 @@
+/*ALL OVER THEME*/
+
+:root {
+  --primary: #ffc801;
+  --secondary: #f6f7f6;
+  --textcolor: #212121;
+  --white: #FAFAFA;
+  --dark-primary: #1b365d;
+  --highlight: #EBF3FE;
+  --shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+  --radius :5px
+}
+  
+/*INPUT THEME*/
+:root{
+  --input-bg: #f2f2f23d;
+  --input-hover:  #dcdfe277;
+  --input-border:   rgb(207, 207, 207);
+  --input-text: #c4c7c7;
+}
+
+/*BUTTON THEME*/
+:root{
+  --btn-hover: #2071ce;
+}
+
+/*DROPDOWN THEME*/
+:root{
+  --dropdown-bg: #f2f2f2;
+  --dropdown-hover: #ced4da;
+  --dropdown-text: #6d6d6d;
+}
