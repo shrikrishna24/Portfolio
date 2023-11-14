@@ -16,7 +16,7 @@ export default function About() {
                 <div className='about-text'>
                     <div className='about-decrp'>
                         <h1 className='about-heading'>About <span className='about-spans'>me.</span></h1>
-                        <p>Graduated Information Technology passionate about  to kickstart my career as a Front-End Developer. With meticulous attention to detail, adept problem-solving, and a collaborative team player. Eager to showcase expertise as a skillful service provider meeting industry demands.
+                        <p className='about-paragraph'>Graduated Information Technology passionate about  to kickstart my career as a Front-End Developer. With meticulous attention to detail, adept problem-solving, and a collaborative team player. Eager to showcase expertise as a skillful service provider meeting industry demands.
                         </p>
                     </div>
                     <div className='about-skills'>
