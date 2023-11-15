@@ -1,23 +1,31 @@
-.input-field1 {
-  background-color: var(--white);
-  color: #7a7a7a;
-  width: 100%; /*temporary */
-  height: 31px;
-  font-size: 1rem;
-  border-radius: 2px;
+.input-field,textarea {
+  color: var(--dark-primary);
+  width: 100%; 
+  height:40px;
+  font-size: 15px;
+  font-weight: 600;
   outline: none;
   text-align: left;
   border: transparent;
-  padding: 6px 12px;
-  border-radius: 7px;
+  padding: 6px 12px 6px 15px;
+  background-color: transparent;
+  border-bottom: 1px solid var(--dark-primary);
+  border-width: 80%;  
 }
 
-.input-field1:hover {
-  background-color: #ced4da;
+.input-field:active,
+.input-field:focus {
+  background-color: transparent;
 }
 
-.no-hover:hover {
-  background-color: f2f2f2;
+.input-field.typing {
+  border: 1px solid #000; /* Change #000 to the desired border color */
+}
+
+textarea{
+  resize: vertical;
+  min-height: 37px;
+  max-height: 100px;
 }
 
 @media screen and (max-width: 600px) {

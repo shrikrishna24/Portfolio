@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./input.css";
 
 export default function TextBox(props) {
-  let { name, value, type, placeholder, handleChange, required, label } = props;
+  let { name, value, type, placeholder, handleChange, required, label, index } = props;
 
   if (!name) {
     name = "Input-box";
@@ -23,22 +23,47 @@ export default function TextBox(props) {
     label = "";
   }
 
+  const [isTyping, setIsTyping] = useState(false);
+
+  const handleInputChange = (e) => {
+    setIsTyping(true);
+    handleChange(e);
+  };
+
+  const handleInputBlur = () => {
+    setIsTyping(false);
+  };
+
   return (
-    <>
+    <React.Fragment key={index ? index : ''}>
       {label && (
-        <label for={label}>
+        <label htmlFor={label}>
           <p>{label}</p>
         </label>
       )}
-      <input
-        className="input-field1"
-        name={name}
-        value={value}
-        onChange={handleChange}
-        type={type}
-        placeholder={placeholder}
-        required={required}
-      />
-    </>
+      {type === "textarea" ? (
+        <textarea
+          className={`input-field ${isTyping ? "typing" : ""}`}
+          name={name}
+          value={value}
+          onChange={handleInputChange}
+          onBlur={handleInputBlur}
+          placeholder={placeholder}
+          required={required}
+
+        />
+      ) : (
+        <input
+          className={`input-field ${isTyping ? "typing" : ""}`}
+          name={name}
+          value={value}
+          onChange={handleInputChange}
+          onBlur={handleInputBlur}
+          type={type}
+          placeholder={placeholder}
+          required={required}
+        />
+      )}
+    </React.Fragment>
   );
 }

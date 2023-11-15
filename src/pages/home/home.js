@@ -40,7 +40,7 @@ export default function Home() {
                 </div>
 
                 <div className='home-img'>
-                    <img src={require('../../assests/home/home.jpg')} width={''} height={''} alt="" srcset="" />
+                    <img src={require('../../assests/home/home.jpg')} width={''} height={''} alt="" />
                 </div>
 
             </section>

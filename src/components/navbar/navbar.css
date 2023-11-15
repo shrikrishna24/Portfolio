@@ -1,26 +1,35 @@
 nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 600;
-    position: sticky;
+    width: 100%;
     background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.08);
+    position: sticky;
     top: 0;
     height: 71px;
-    padding: 0 25px;
-    box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.08);
     z-index: 9;
 }
 
-nav ul{
+
+
+.nav-content{
+    width: 69rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+.nav-content ul{
     display: flex;
     gap: 20px;
     list-style: none;
 }
 
 
-nav ul li{
+.nav-content ul li{
     cursor: pointer;
 }
 

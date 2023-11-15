@@ -3,13 +3,22 @@ import './contact.css'
 import { Element } from 'react-scroll'
 import Textbox from '../../components/input/input'
 import Button from '../../components/button/button'
+import { useTypewriter } from 'react-simple-typewriter'
+import { FaEnvelope, FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
+
 
 export default function Contact() {
+
+    const [typeEffect] = useTypewriter({
+        words: ['to craft Experiences.', ' to bring ideas Online.', 'to grow Together.', 'to get free Quote.',],
+        loop: {},
+        typeSpeed: 100,
+        deleteSpeed: 15
+    })
+
     const [fields, setFormFields] = useState({
         fullName: undefined,
         email: undefined,
-        organisation: undefined,
-        phone: undefined,
         subject: undefined,
         message: undefined,
     });
@@ -28,21 +37,11 @@ export default function Contact() {
         },
         {
             type: "text",
-            name: "organisation",
-            value: fields.organisation,
-        },
-        {
-            type: "number",
-            name: "phone",
-            value: fields.phone,
-        },
-        {
-            type: "text",
             name: "subject",
             value: fields.subject,
         },
         {
-            type: "text",
+            type: "textarea",
             name: "message",
             value: fields.message,
         },
@@ -63,8 +62,6 @@ export default function Contact() {
         const body = {
             fullName: value.fullName,
             email: value.email,
-            company: value.organisation,
-            phone: value.phone,
             subject: value.subject,
             message: value.message,
         };
@@ -106,28 +103,75 @@ export default function Contact() {
         }
     }
 
+    const socialLinks = [
+        {
+            link: 'mailto:121krishnavishwkarma',
+            icons: <FaEnvelope size={20} />,
+            title: '121krishnavishwakarma@gmail.com'
+        },
+        {
+            link: "https://www.linkedin.com/in/krishna-vishwakarma-085ba6214/",
+            icons: <FaLinkedinIn size={20} />,
+            title: 'Connect on Linkedin'
+        },
+        {
+            link: "https://instagram.com/krishna__vishwakarma_?igshid=MmVlMjlkMTBhMg%3D%3D&utm_source=qr",
+            icons: <FaInstagram size={20} />,
+            title: 'Follow on Instagram'
+        },
+        {
+            link: "https://github.com/shrikrishna24",
+            icons: <FaGithub size={20} />,
+            title: 'Build on Github'
+        }
+    ]
+
     return (
         <Element name="contact" className="contact-container">
             <section className='contact-content'>
-                <div>
-                    map
+                <div className='contact-text'>
+                    <div>
+                        <h1 className='contact-heading'>Contact <span style={{ color: '#1b365d' }}>{typeEffect}</span></h1>
+                    </div>
+                    <ul className='social-links'>
+                        {socialLinks.map((item, index) => {
+                            return (
+                                <li key={index}>
+                                    <a
+                                        href={item.link}
+                                        target={item.title !== '121krishnavishwakarma@gmail.com' ? "_blank" : "_self"}
+                                        rel={item.title !== '121krishnavishwakarma@gmail.com' ? "noopener noreferrer" : ""}
+                                    >
+
+                                        <p> <span>{item.icons}</span> {item.title}</p>
+                                    </a>
+                                </li>
+                            )
+                        })}
+
+                    </ul>
                 </div>
                 <form
                     className="contact-form"
                     id="contact-form"
                     onSubmit={handleSubmit}
                 >
-                    {contactContents.map((item) => (
-                        <Textbox
-                            type={item.type}
-                            placeholder={item.name === "fullName" ? "full name" : item.name}
-                            value={item.value}
-                            name={item.name}
-                            handleChange={handleFieldChange}
-                            required={true}
-                        />
-                    ))}
-                    <Button btype={"btn-secondary"} type={"submit"} bTitle={"submit"} />
+                    <div className='form-fields'>
+                        {contactContents.map((item, index) => (
+                            <Textbox
+                                index={index}
+                                type={item.type}
+                                placeholder={item.name === "fullName" ? "full name" : item.name}
+                                value={item.value}
+                                name={item.name}
+                                handleChange={handleFieldChange}
+                                required={true}
+                            />
+                        ))}
+                    </div>
+                    <div className='form-button'>
+                        <Button btype={"btn-secondary"} type={"submit"} bTitle={"submit"} />
+                    </div>
                 </form>
             </section>
         </Element>
