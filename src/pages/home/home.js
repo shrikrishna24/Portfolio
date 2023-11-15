@@ -8,11 +8,25 @@ import { Link } from 'react-scroll';
 
 export default function Home() {
     const [typeEffect] = useTypewriter({
-        words: ['Krishna.', 'Web Developer.', 'Frontend Developer.', 'React Developer.', 'Figma Designer.'],
+        words: ['ShriKrishna.', 'Web Developer.', 'Frontend Developer.', 'React Developer.', 'Figma Designer.'],
         loop: {},
         typeSpeed: 100,
         deleteSpeed: 40
     })
+
+    const handleDownloadResume = () => {
+        // Replace 'your_resume.pdf' with the actual URL or path of your PDF file
+        const pdfUrl = require('../../assests/home/Resume.pdf');
+
+        // Option 1: Open PDF in a new window
+        window.open(pdfUrl, '_blank');
+
+        // Option 2: Trigger download using anchor tag
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = 'krishna-Resume.pdf';
+        link.click();
+    };
     return (
         <Element name="home" className="home-container">
             <section className='home-content'>
@@ -30,7 +44,7 @@ export default function Home() {
                     </div>
 
                     <div className='home-btn'>
-                        <Button btype='primary' bTitle={' Download Resume'} />
+                        <Button handleClick={handleDownloadResume} btype='primary' bTitle={' Download Resume'} />
 
                         <Link to={'contact'} smooth={true} >
                             <Button btype='btn-secondary' bTitle={' Get free quote'} />
