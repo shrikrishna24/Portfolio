@@ -22,13 +22,43 @@
     margin-top: 7px;
 }
 
+.skill-list{
+    font-size: 18px;
+    font-weight: 400 ;
+}
+
 .readmore-skill{
     color: var(--white);    
-
+    font-weight: 600;
     background-color: var(--dark-primary);
     padding: 0 3px;
 }
 
 .readmore-skill:hover{
     color: var(--primary);
+}
+
+@media screen and (max-width:768px) {
+    .skill-icon{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 30px;
+    }
+
+    .skill-icon li{
+        width: 97px;
+    }
+
+    .skill-list{
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (max-width:325px) {
+    .skill-list,.readmore-skill{
+        font-size: 13px;
+    }
+
+   
 }

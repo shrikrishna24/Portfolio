@@ -42,10 +42,7 @@ export default function Skill() {
             icon: <FaBitbucket size={20} />,
             title: "Bitbucket",
         },
-        {
-            icon: <FaNodeJs size={20} />,
-            title: "Nodejs",
-        },
+
     ];
 
     const displayedSkills = showAllSkills ? aboutSkills : aboutSkills.slice(0, 6);
@@ -56,7 +53,7 @@ export default function Skill() {
                 {displayedSkills.map((item, index) => (
                     <li key={index}>
                         <span>{item.icon}</span>
-                        <p>{item.title}</p>
+                        <p className='skill-list'>{item.title}</p>
                     </li>
                 ))}
                 {!showAllSkills && (

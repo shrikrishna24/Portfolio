@@ -17,16 +17,15 @@
     align-items: center;
 }
 
-.about-header{
+.service-header{
     position: absolute;
     top: 10%;
 }
 
-.about-header h1{
+.service-header h1{
     text-align: center;
     color: white;
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 40px;
 }
 
 .service-card-container{
@@ -40,6 +39,7 @@
 
 .service-cards{
     height: 250px;
+    width: 230px;
     z-index: 6;
     background-color: var(--white);
     color: var(--textcolor);
@@ -48,7 +48,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 230px;
     box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.08) !important;
 }
 
@@ -72,6 +71,11 @@
     font-size: 15px;
     font-weight: bold;
 }
+
+.service-descrip p{
+    font-size: 18px;
+}
+
 
 .service-card-border{
     width: 100%;
@@ -128,3 +132,60 @@
 
 }
 
+
+@media screen and (max-width:768px) {
+
+    .service-cards{
+    margin-top: 80px;
+    }
+
+    .service-header h1{
+        font-size: 35px;
+        font-weight: 500;
+    }
+
+    
+    .service-descrip p{
+        font-size: 15px;
+    }
+
+  }
+
+@media screen and (max-width:600px) {
+
+    .carousel_arrow_left,
+    .carousel_arrow_right {
+    width: 40px;
+    height: 40px;
+    }   
+
+}
+
+@media screen and (max-width:325px) {
+    
+    .service-cards{
+        height: 250px;
+        width: 200px;
+    }
+
+    .service-header h1{
+        font-size: 30px;
+    }
+
+    
+    .carousel_arrow_left,
+    .carousel_arrow_right {
+    width: 35px;
+    height: 35px;
+    }   
+
+    .service-title{
+        font-size: 14px;
+    }
+    
+    .service-descrip p{
+        font-size: 13px;
+    }
+
+
+}

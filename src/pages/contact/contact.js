@@ -10,7 +10,7 @@ import { FaEnvelope, FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa"
 export default function Contact() {
 
     const [typeEffect] = useTypewriter({
-        words: ['to craft Experiences.', ' to bring ideas Online.', 'to grow Together.', 'to get free Quote.',],
+        words: ['to craft Experiences.', ' to collab ideas.', 'to grow Together.', 'to get free Quote.',],
         loop: {},
         typeSpeed: 100,
         deleteSpeed: 15
@@ -131,7 +131,7 @@ export default function Contact() {
             <section className='contact-content'>
                 <div className='contact-text'>
                     <div>
-                        <h1 className='contact-heading'>Contact <span style={{ color: '#1b365d' }}>{typeEffect}</span></h1>
+                        <h1 className='contact-heading'> Contact <span style={{ color: '#1b365d' }}>{typeEffect}</span></h1>
                     </div>
                     <ul className='social-links'>
                         {socialLinks.map((item, index) => {
@@ -143,7 +143,7 @@ export default function Contact() {
                                         rel={item.title !== '121krishnavishwakarma@gmail.com' ? "noopener noreferrer" : ""}
                                     >
 
-                                        <p> <span>{item.icons}</span> {item.title}</p>
+                                        <p>{item.icons} <span>{item.title}</span></p>
                                     </a>
                                 </li>
                             )

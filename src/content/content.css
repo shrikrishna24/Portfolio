@@ -9,3 +9,21 @@
     width: 69rem;
 }
 
+@media screen and (max-width:768px) {
+  .container > div {
+    height: 100%;
+    padding: 0 60px;
+  }
+
+  .container > div > section{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:325px) {
+  .container > div {
+    height: 100%;
+    padding: 0 30px;
+  }
+
+}

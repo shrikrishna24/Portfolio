@@ -68,6 +68,8 @@ nav{
         gap: 40px;
     }
 
+
+
     .nav_menu_open {
         transform: translateX(-100%);
     }

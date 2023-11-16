@@ -37,7 +37,7 @@ export default function Service() {
         <Element name="services" className="service-container">
             <div className="service-bg"></div>
             <section className="service-content">
-                <div className='about-header'>
+                <div className='service-header'>
                     <h1>Services</h1>
                 </div>
                 <div
@@ -51,7 +51,7 @@ export default function Service() {
                                 <div>
                                     <p className="service-title">{item.serviceType}</p>
                                 </div>
-                                <div>
+                                <div className='service-descrip'>
                                     <p>{item.seriveDetails}</p>
                                 </div>
                                 <div className="service-card-border"></div>

@@ -27,9 +27,15 @@
   color: var(--dark-primary);
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     .btn-primary button,.btn-secondary button {
       font-size: 13px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .btn-primary button,.btn-secondary button {
+      font-size: 12px;
     }
   }
   

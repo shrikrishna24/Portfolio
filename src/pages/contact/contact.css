@@ -22,7 +22,7 @@
 
 .contact-heading{
     color: white;
-    font-size: 2.5rem;
+    font-size: 45px;
 }
 
 .social-links li{
@@ -42,7 +42,7 @@
 }
 
 .social-links p span{
-    margin: 3px 15px 0 0;
+    margin: 0 0 2px 15px;
 }
 
 .social-links p:hover{
@@ -78,3 +78,56 @@
     background-color: var(--dark-primary) ;
     color: var(--white) ;
 }
+
+
+@media screen and (max-width:425px) {
+    .contact-heading{
+        height: 70px;
+}
+}
+
+@media screen and (max-width:768px) {
+
+
+    .contact-content{
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .social-links{
+        display: flex;
+        gap: 20px;
+    }
+
+    .social-links p{
+        width: auto;
+        padding-left: 0px;
+    }
+
+    .social-links p span{
+        display: none;
+    }
+
+    /* TEXT CONTACT  */
+    .contact-text{
+        width: 100%;
+        gap: 20px;
+    }
+
+    .contact-heading{
+        font-size: 35px;
+    }
+
+    .contact-form{
+        width: 100%;
+        padding: 0;
+    }
+  }
+
+  @media screen and (max-width:325px) {
+    .contact-heading{
+        font-size: 30px;
+    }
+  }

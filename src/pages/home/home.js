@@ -8,7 +8,7 @@ import { Link } from 'react-scroll';
 
 export default function Home() {
     const [typeEffect] = useTypewriter({
-        words: ['ShriKrishna.', 'Web Developer.', 'Frontend Developer.', 'React Developer.', 'Figma Designer.'],
+        words: ['ShriKrishna.', 'Web Developer.', 'React Developer.', 'Figma Designer.'],
         loop: {},
         typeSpeed: 100,
         deleteSpeed: 40
@@ -44,7 +44,7 @@ export default function Home() {
                     </div>
 
                     <div className='home-btn'>
-                        <Button handleClick={handleDownloadResume} btype='primary' bTitle={' Download Resume'} />
+                        <Button handleClick={handleDownloadResume} btype='primary' bTitle={' Get my Resume'} />
 
                         <Link to={'contact'} smooth={true} >
                             <Button btype='btn-secondary' bTitle={' Get free quote'} />

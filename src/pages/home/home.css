@@ -21,7 +21,7 @@
 
 .home-tagline h1{
     margin: 28px 0;
-    font-size: 2.5rem;
+    font-size: 40px;
     text-align: left;
 }
 .tagline-heading{
@@ -54,3 +54,121 @@
 }
 
 
+@media screen and (max-width:1000px) {
+
+    .home-content{
+        padding-top: 50px ;
+        flex-direction: column;
+    }
+
+    .home-tagline{
+        width: 100% !important;
+    }
+
+    .home-img{
+        width: 500px;
+        height: auto;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .home-container {
+        height: calc(100vh - 71px) !important;
+    }
+
+    .home-content{
+        display: flex;  
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 0;
+    }
+
+    .home-tagline{
+        width: 100%;
+    }
+
+    .home-img{
+        height: auto;
+        width: 58%;
+    }
+
+    .home-tagline h1{
+        margin: 18px 0;
+        font-size: 35px;
+    }
+
+    .tagline-descrp{
+        font-weight: 400 ;
+    }
+
+    .home-btn button{
+        margin-top: 40px;
+        width: 130px !important;
+    }
+    
+}
+
+@media screen and (max-width:600px) {
+
+    .home-img{
+        height: 48%;
+        width: 80%;
+    }
+
+    .home-tagline h1{
+        margin: 18px 0;
+        font-size: 28px;
+        height: 70px;
+    }
+
+    .tagline-descrp{
+        font-size: 15px ;
+    }
+
+    .home-btn button{
+        width: 120px !important;
+    }
+    .home-btn button:nth-child(2){
+        margin-top: 0 !important;
+    }
+}
+
+
+
+@media screen and (max-width:325px) {
+    .home-content{
+        height: 100% !important;
+    }
+
+    .home-img{
+        margin-top: 40px;
+        height: 50%;
+        width: 100%;
+    }
+    
+    .home-tagline h1{
+        font-size: 30px;
+    }
+        
+    .tagline-descrp{
+        font-size: 14px;
+    }
+
+    /* BUTTON  */
+    .home-btn{
+        display: block;
+    }
+
+    .home-btn button{
+        width: 100% !important;
+    }
+    
+    .home-btn a>div>button{
+        margin: 15px 0 50px;
+    }
+
+
+}
