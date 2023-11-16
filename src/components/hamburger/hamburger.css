@@ -1,0 +1,26 @@
+.hamburger{
+    display: none; 
+}
+
+.bar{
+    height: 2px;
+    width: 25px;
+    background: var(--dark-primary);   
+    margin: 7px 0;
+    border-radius: 10px;
+}
+
+.hamburger .bar:nth-child(2){
+    width: 20px;
+}
+
+
+@media screen and (max-width: 825px){
+    .hamburger{
+        display:inline-block;
+        width: 30px;
+        cursor: pointer;
+        padding: 17px 0;   
+        transition: all 0.5s linear;  
+    }
+}
