@@ -72,7 +72,7 @@ export default function Contact() {
         try {
             // console.log(JSON.stringify(body));
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycbx85sn95s2BtyqBz0G_LLSwiobdxr5DZK3P_LNjr8FV15M7Fjju0cXx5n9BXse1Up-I/exec",
+                "https://script.google.com/macros/s/AKfycbyjvBZer1CCPjXZFoVtYA-f51LJ162ghWsySH1ZVw_Bm-bd_Wr4TckcAJXkWGIfJNd6/exec",
                 {
                     method: "POST",
                     mode: 'no-cors',
