@@ -29,13 +29,13 @@
   
   @media screen and (max-width: 768px) {
     .btn-primary button,.btn-secondary button {
-      font-size: 13px;
+      font-size: 14px;
     }
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 325px) {
     .btn-primary button,.btn-secondary button {
-      font-size: 12px;
+      font-size: 13px;
     }
   }
   

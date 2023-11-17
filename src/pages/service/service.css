@@ -135,6 +135,7 @@
 
 @media screen and (max-width:768px) {
 
+
     .service-cards{
     margin-top: 80px;
     }
@@ -152,6 +153,16 @@
   }
 
 @media screen and (max-width:600px) {
+
+    .service-container {
+        height: calc(100vh - 71px) !important;
+    }
+
+
+    .service-cards{
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
 
     .carousel_arrow_left,
     .carousel_arrow_right {
