@@ -34,9 +34,9 @@ nav{
 
 
 .active-link{
+    display: block;
     padding: 10px 15px;
 }
-
 
 .active-link:hover{
     background-color: var(--dark-primary);
@@ -68,7 +68,19 @@ nav{
         gap: 40px;
     }
 
+    .nav-content ul li{
+        width: 100%;
+    }
 
+    
+    .active-link{
+        padding: 10px 15px;
+        width: 100%;
+    }
+
+    .active-link:visited{
+        background-color: aqua;
+    }
 
     .nav_menu_open {
         transform: translateX(-100%);

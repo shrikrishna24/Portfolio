@@ -1,10 +1,9 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import './navbar.css';
 import { Link } from 'react-scroll';
 import Hamburger from '../hamburger/hamburger'
 
 export default function Navbar() {
-    const [isClicked, setIsClicked] = useState(false);
     const [isBurgerClicked, setIsBurgerClicked] = useState(false);
 
     const menuItems = [
@@ -30,11 +29,11 @@ export default function Navbar() {
         },
     ];
 
-    const hideNavbar =()=>{
+    const hideNavbar = () => {
         setIsBurgerClicked(false);
     }
 
-    const showNavbar =()=>{
+    const showNavbar = () => {
         setIsBurgerClicked(true);
     }
 
@@ -45,11 +44,11 @@ export default function Navbar() {
                     <img src={require('../../assests/navbar/logo.png')} height={'80px'} width={'75px'} alt="" />
                 </div>
                 <div>
-                    <ul className={isBurgerClicked ? "nav_menu_close " : "nav_menu_open"}> 
+                    <ul className={isBurgerClicked ? "nav_menu_close " : "nav_menu_open"}>
                         {menuItems.map((item) => {
                             return (
                                 <li>
-                                    <Link onClick={hideNavbar} to={item.url} smooth={true} duration={500} offset={-70} className='active-link'>
+                                    <Link onClick={hideNavbar} to={item.url} smooth={true} duration={500} offset={-70} className='active-link' >
                                         {item.title}
                                     </Link>
                                 </li>
@@ -57,9 +56,9 @@ export default function Navbar() {
                         })}
                     </ul>
                 </div>
-            <Hamburger Click={isBurgerClicked ? hideNavbar : showNavbar} open={isBurgerClicked} />
+                <Hamburger Click={isBurgerClicked ? hideNavbar : showNavbar} open={isBurgerClicked} />
             </div>
-            
+
         </nav>
     )
 }

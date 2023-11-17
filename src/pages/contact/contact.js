@@ -10,7 +10,7 @@ import { FaEnvelope, FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa"
 export default function Contact() {
 
     const [typeEffect] = useTypewriter({
-        words: ['to craft Experiences.', ' to collab ideas.', 'to grow Together.', 'to get free Quote.',],
+        words: ['To build Journeys.', ' To collab Ideas.', 'To grow Together.', 'To get free Quote.',],
         loop: {},
         typeSpeed: 100,
         deleteSpeed: 15

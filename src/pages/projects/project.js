@@ -17,17 +17,20 @@ export default function Project() {
         {
             title: 'Viyat',
             description: 'A leading IoT visualization tool with an Admin dashboard for effortless device monitoring. Users get personalized real-time weather data insights',
-            link: "https://weathercastsolutions.com/products/viyat"
+            link: "https://weathercastsolutions.com/products/viyat",
+            img: require('../../assests/projects/viyat.png')
         },
         {
             title: 'MicroCast',
             description: 'Website with 3-hourly updated predictions 30-hour forecast on dashboard, and high temperature forecast accuracy within 1.5°C',
             link: "https://test.weathercastsolutions.com/",
+            img: require('../../assests/projects/microcast.png')
         },
         {
             title: 'Company Portfolio',
             description: 'Startup company portfolio',
-            link: 'https://weathercastsolutions.com/'
+            link: 'https://weathercastsolutions.com/',
+            img: require('../../assests/projects/portfolio-company.png')
         },
     ];
 
@@ -42,7 +45,6 @@ export default function Project() {
         }
     };
 
-    console.log(getCardsPerPage());
 
     const slideRight = () => {
         const cardsPerPage = getCardsPerPage();
@@ -72,7 +74,8 @@ export default function Project() {
                         return (
 
                             <div key={index} className='project-carousel'>
-                                <div className='pr-carousel-title'>
+                                <div className="service-card-border"></div>
+                                <div className='pr-carousel-title' style={{ backgroundImage: `url(${item.img})` }}>
                                     <a target="_blank" rel="noopener noreferrer" href={item.link} >
                                         {item.title}
                                     </a>

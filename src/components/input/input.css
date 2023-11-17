@@ -22,6 +22,10 @@
   border: 1px solid #000; /* Change #000 to the desired border color */
 }
 
+input::placeholder,textarea::placeholder {
+  color: var(--dark-primary); /* Replace with your desired color code */
+}
+
 textarea{
   resize: vertical;
   min-height: 37px;

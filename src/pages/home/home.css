@@ -74,9 +74,6 @@
 
 @media screen and (max-width:768px) {
 
-    .home-container {
-        height: calc(100vh - 71px) !important;
-    }
 
     .home-content{
         display: flex;  
@@ -113,19 +110,20 @@
 
 @media screen and (max-width:600px) {
 
+
     .home-img{
         height: 48%;
-        width: 80%;
+        width: 100%;
     }
 
     .home-tagline h1{
-        margin: 18px 0;
-        font-size: 28px;
+        font-size: 35px;
         height: 70px;
     }
 
     .tagline-descrp{
         font-size: 15px ;
+        margin-top: 35px;
     }
 
     .home-btn button{
@@ -150,7 +148,7 @@
     }
     
     .home-tagline h1{
-        font-size: 30px;
+        font-size: 40px;
     }
         
     .tagline-descrp{
