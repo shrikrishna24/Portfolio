@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './navbar.css';
 import { Link } from 'react-scroll';
 import Hamburger from '../hamburger/hamburger'
+import Logo from '../../assests/navbar/logo.svg'
 
 export default function Navbar() {
     const [isBurgerClicked, setIsBurgerClicked] = useState(false);
@@ -41,7 +42,7 @@ export default function Navbar() {
         <nav>
             <div className='nav-content'>
                 <div className='navbar-logo'>
-                    <img src={require('../../assests/navbar/logo.svg')} height={'80px'} width={'75px'} alt="" />
+                    <img src={Logo} height={'80px'} width={'75px'} alt="" />
                 </div>
                 <div>
                     <ul className={isBurgerClicked ? "nav_menu_close " : "nav_menu_open"}>
