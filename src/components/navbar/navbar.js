@@ -41,13 +41,13 @@ export default function Navbar() {
         <nav>
             <div className='nav-content'>
                 <div className='navbar-logo'>
-                    <img src={require('../../assests/navbar/logo.png')} height={'80px'} width={'75px'} alt="" />
+                    <img src={require('../../assests/navbar/logo.svg')} height={'80px'} width={'75px'} alt="" />
                 </div>
                 <div>
                     <ul className={isBurgerClicked ? "nav_menu_close " : "nav_menu_open"}>
-                        {menuItems.map((item) => {
+                        {menuItems.map((item, index) => {
                             return (
-                                <li>
+                                <li key={index}>
                                     <Link onClick={hideNavbar} to={item.url} smooth={true} duration={500} offset={-70} className='active-link' >
                                         {item.title}
                                     </Link>

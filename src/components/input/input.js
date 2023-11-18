@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./input.css";
 
 export default function TextBox(props) {
-  let { name, value, type, placeholder, handleChange, required, label, index } = props;
+  let { name, value, type, placeholder, handleChange, required, label } = props;
 
   if (!name) {
     name = "Input-box";
@@ -35,7 +35,7 @@ export default function TextBox(props) {
   };
 
   return (
-    <React.Fragment key={index ? index : ''}>
+    <>
       {label && (
         <label htmlFor={label}>
           <p>{label}</p>
@@ -64,6 +64,6 @@ export default function TextBox(props) {
           required={required}
         />
       )}
-    </React.Fragment>
+    </>
   );
 }

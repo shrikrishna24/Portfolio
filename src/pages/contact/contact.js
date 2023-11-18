@@ -158,15 +158,16 @@ export default function Contact() {
                 >
                     <div className='form-fields'>
                         {contactContents.map((item, index) => (
-                            <Textbox
-                                index={index}
-                                type={item.type}
-                                placeholder={item.name === "fullName" ? "full name" : item.name}
-                                value={item.value}
-                                name={item.name}
-                                handleChange={handleFieldChange}
-                                required={true}
-                            />
+                            <React.Fragment key={index}>
+                                <Textbox
+                                    type={item.type}
+                                    placeholder={item.name === "fullName" ? "full name" : item.name}
+                                    value={item.value}
+                                    name={item.name}
+                                    handleChange={handleFieldChange}
+                                    required={true}
+                                />
+                            </React.Fragment>
                         ))}
                     </div>
                     <div className='form-button'>
