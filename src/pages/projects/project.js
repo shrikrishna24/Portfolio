@@ -23,7 +23,7 @@ export default function Project() {
         {
             title: 'MicroCast',
             description: 'Website with 3-hourly updated predictions 30-hour forecast on dashboard, and high temperature forecast accuracy within 1.5°C',
-            link: "https://test.weathercastsolutions.com/",
+            link: "https://microcast.weathercastsolutions.com/",
             img: require('../../assests/projects/microcast.png')
         },
         {
