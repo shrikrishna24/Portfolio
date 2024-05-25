@@ -13,10 +13,7 @@
     width: 110px;
 }
 
-.skill-icon li:hover{
-    cursor:default;
-    color: var(--primary);
-}
+
 
 .skill-icon li>span{
     margin-top: 7px;

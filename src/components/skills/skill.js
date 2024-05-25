@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { FaHtml5, FaCss3, FaBootstrap, FaJs, FaReact, FaFigma, FaGitAlt, FaGithub, FaBitbucket, FaNodeJs } from "react-icons/fa";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaGitAlt, FaGithub, FaBitbucket } from "react-icons/fa";
+import { SiJirasoftware, SiTailwindcss, SiExpress } from "react-icons/si";
 import './skill.css';
 
 export default function Skill() {
@@ -13,10 +14,6 @@ export default function Skill() {
         {
             icon: <FaCss3 size={20} />,
             title: "CSS",
-        },
-        {
-            icon: <FaBootstrap size={20} />,
-            title: "Bootstrap",
         },
         {
             icon: <FaJs size={20} />,
@@ -41,6 +38,18 @@ export default function Skill() {
         {
             icon: <FaBitbucket size={20} />,
             title: "Bitbucket",
+        },
+        {
+            icon: <SiJirasoftware size={20} />,
+            title: "Jira",
+        },
+        {
+            icon: <SiTailwindcss size={20} />,
+            title: "Tailwind",
+        },
+        {
+            icon: <SiExpress size={20} />,
+            title: "Express.js",
         },
 
     ];
