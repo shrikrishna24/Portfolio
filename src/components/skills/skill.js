@@ -40,10 +40,6 @@ export default function Skill() {
             title: "Bitbucket",
         },
         {
-            icon: <SiJirasoftware size={20} />,
-            title: "Jira",
-        },
-        {
             icon: <SiTailwindcss size={20} />,
             title: "Tailwind",
         },
