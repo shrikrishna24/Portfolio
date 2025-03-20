@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaGitAlt, FaGithub, FaBitbucket } from "react-icons/fa";
-import { SiJirasoftware, SiTailwindcss, SiExpress } from "react-icons/si";
+import { SiJirasoftware, SiTailwindcss, SiExpress, SiPostgresql } from "react-icons/si";
 import './skill.css';
 
 export default function Skill() {
@@ -41,11 +41,15 @@ export default function Skill() {
         },
         {
             icon: <SiTailwindcss size={20} />,
-            title: "Tailwind",
+            title: "Tailwind.css",
         },
         {
             icon: <SiExpress size={20} />,
             title: "Express.js",
+        },
+        {
+            icon: <SiPostgresql size={20} />,
+            title: "PostgreSQL",
         },
 
     ];
